@@ -1,0 +1,25 @@
+
+.load2{
+    height: 100vh;
+    background-image: url(../assets/4.jpg);
+}
+.Absolute-Center.is-Responsive {
+    height: 39vh;
+    width: 33vw;
+    background: #379dc361;
+    margin: 0 auto;
+}
+.Absolute-Center h2 {
+    text-align: center;
+    vertical-align: middle;
+    /* margin: 22px; */
+    font-size: 3vh;
+    padding-top: 7vh;
+    padding-bottom: 8vh;
+}
+.btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #194e63;
+    background-image: none;
+    border-color: #09253e;
+}
