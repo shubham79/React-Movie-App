@@ -10,6 +10,7 @@ import Auth from '../Auth/Auth';
 import Callback from '../Callback/Callback';
 import history from '../history';
 import Popup from 'react-popup';
+import Profile from '../Profile/Profile';
 
 
 const auth = new Auth();
@@ -116,6 +117,9 @@ class App extends Component {
           <Link onClick={() => this.closeMenu()} to="/search">Search..</Link>
         </li>
 				}
+				 <li>
+          <Link onClick={() => this.closeMenu()} to="/profile">Profile</Link>
+        </li>
 				{
 					isAuthenticated() && 
 					<li>
@@ -140,6 +144,14 @@ class App extends Component {
 							<div>
 							<Search auth={auth} {...props} /> 
 							<Spotlight auth={auth} {...props} /> 
+							</div>
+            ))} />
+						 <Route path="/profile" render={(props) => ( !auth.isAuthenticated() ? (
+              <Redirect to="/"/>
+            ) : (
+							<div>
+							<Profile auth={auth} {...props} /> 
+							 
 							</div>
             ))} />
 					  <Route path="/callback" render={(props) => {
